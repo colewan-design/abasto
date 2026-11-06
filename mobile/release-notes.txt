@@ -1,0 +1,10 @@
+# What is new in this build, one bullet per line.
+#
+# `./gradlew publishRelease` copies these into web/public/downloads/android.json,
+# where both the download page and the in-app update prompt read them. Lines
+# starting with # are ignored, as is a leading "-".
+#
+# Write them for the person deciding whether to install, not for the changelog.
+
+- In-app updates: the app now notices a newer build and offers to install it
+- Receipt scanning handles faint thermal printing more reliably

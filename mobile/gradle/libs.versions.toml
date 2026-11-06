@@ -1,0 +1,93 @@
+[versions]
+agp = "8.13.1"
+kotlin = "2.2.20"
+ksp = "2.2.20-2.0.4"
+# 2.57+ of the Hilt Gradle plugin requires AGP 9; this is the newest release
+# that still builds against AGP 8.x.
+hilt = "2.56.2"
+compose = "1.9.2"
+material3 = "1.4.0"
+lifecycle = "2.9.4"
+retrofit = "3.0.0"
+okhttp = "5.3.2"
+serialization = "1.8.1"
+coroutines = "1.10.2"
+coil = "3.1.0"
+navigation = "2.9.8"
+datastore = "1.1.7"
+credentials = "1.5.0"
+googleid = "1.1.1"
+mlkit-text = "16.0.1"
+camerax = "1.4.2"
+
+[libraries]
+# Platform
+androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.16.0" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.11.0" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.7.1" }
+androidx-exifinterface = { module = "androidx.exifinterface:exifinterface", version = "1.4.2" }
+androidx-biometric = { module = "androidx.biometric:biometric", version = "1.1.0" }
+androidx-splashscreen = { module = "androidx.core:core-splashscreen", version = "1.0.1" }
+
+# Compose
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+compose-material-icons = { module = "androidx.compose.material:material-icons-extended", version = "1.7.8" }
+
+# Lifecycle and navigation
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+
+# Dependency injection
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.2.0" }
+
+# Networking
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-serialization = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Storage
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+
+# Images
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+
+# Google sign-in
+credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
+credentials-play-services = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentials" }
+googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleid" }
+
+# On-device receipt text recognition
+mlkit-text-recognition = { module = "com.google.mlkit:text-recognition", version.ref = "mlkit-text" }
+
+# Camera
+camera-core = { module = "androidx.camera:camera-core", version.ref = "camerax" }
+camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "camerax" }
+camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "camerax" }
+camera-view = { module = "androidx.camera:camera-view", version.ref = "camerax" }
+
+# Testing
+junit = { module = "junit:junit", version = "4.13.2" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+okhttp-mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okhttp" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version = "1.2.1" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version = "3.6.1" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

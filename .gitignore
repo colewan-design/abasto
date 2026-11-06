@@ -1,0 +1,24 @@
+# Repo-wide ignores. api/ and mobile/ carry their own .gitignore for
+# framework-specific output (vendor/, .env, local.properties, Gradle builds);
+# this file covers what sits outside those, plus the cross-cutting cruft.
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Gradle's per-module output. mobile/.gitignore anchors `/build` to its own
+# directory, which does not reach the app module.
+mobile/app/build/
+mobile/app/release/
+
+# Published releases are build output, not source: `gradlew publishRelease`
+# regenerates the APK and the manifest that describes it, and committing a
+# 45 MB binary per release is what the download page's manifest exists to
+# avoid. They must stay in lockstep — a committed android.json without its
+# APK would make the page offer a download that 404s, so neither is tracked.
+web/public/downloads/*.apk
+web/public/downloads/android.json

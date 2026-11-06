@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Where a captured receipt photo is written before it is uploaded. -->
+    <cache-path name="receipt_captures" path="receipts/" />
+
+    <!-- Where a downloaded update is written before it is handed to the
+         system installer, which cannot read a bare file:// path into our
+         cache. -->
+    <cache-path name="app_updates" path="updates/" />
+</paths>

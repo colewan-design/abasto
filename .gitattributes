@@ -1,0 +1,24 @@
+# Normalise to LF in the repository. This is a Windows checkout deployed to
+# Linux, so without this the shell entry points (`gradlew`, `artisan`) get
+# committed with CRLF and fail on the server with a bad-interpreter error.
+* text=auto eol=lf
+
+# Windows-only scripts must keep CRLF to run under cmd.exe.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary: never normalise, never diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.webp binary
+*.apk binary
+*.jar binary
+*.keystore binary
+*.jks binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

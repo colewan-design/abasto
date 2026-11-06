@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        The splash is the icon's own plate rather than a brand colour behind
+        it: the mark is drawn on near-black in the artwork, and a mark lit for
+        a dark plate loses its edges on anything else.
+    -->
+    <color name="splash_background">#0B0C14</color>
+    <color name="window_background">#FAFAFB</color>
+</resources>

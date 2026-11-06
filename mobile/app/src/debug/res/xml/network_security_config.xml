@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Debug builds only.
+
+    A development API is served over plain HTTP — `php artisan serve` on the
+    host machine, reached at 10.0.2.2 from the emulator or at a LAN address
+    from a real device — and the platform blocks cleartext by default from
+    targetSdk 28 onwards. Permitting it here, in the debug source set, keeps
+    local development working while release builds keep the platform's
+    HTTPS-only default: there is no production setting to get wrong, because
+    this file is not in the release APK at all.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <!-- Lets a proxy like Charles or mitmproxy be trusted while
+                 debugging, which it cannot be on a release build. -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
